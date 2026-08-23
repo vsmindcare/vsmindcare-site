@@ -24,7 +24,7 @@
       <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
     <div class="nav-cta">
-      <a href="https://d2oe0ra32qx05a.cloudfront.net/?practiceKey=k_1_113661" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding:10px 20px;font-size:0.85rem;">Book now</a>
+      <a href="contact.html" class="btn btn-ghost" style="padding:10px 20px;font-size:0.85rem;">Book now</a>
       <button class="nav-toggle" aria-label="Toggle menu">☰</button>
     </div>
   </nav>
@@ -49,10 +49,38 @@
 <section>
   <div class="wrap contact-grid">
     <div class="contact-card">
-      <h3>Book Your Free Consultation</h3>
-      <p>Request your free consultation through our secure Tebra scheduling portal. After you submit your request, our team will contact you within 24 hours.</p>
-      <p><small>Please do not use this form for emergencies. If you are in crisis, call or text 988.</small></p>
-      <a href="https://d2oe0ra32qx05a.cloudfront.net/?practiceKey=k_1_113661" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top:12px;">Request your free consultation</a>
+      <h3>Request Your Free Consultation</h3>
+      <p>Share your contact details below. Please do not include symptoms, diagnoses, medications, or other medical information.</p>
+      <form id="consultation-form" class="consultation-form">
+        <label for="patient-name">Full name</label>
+        <input id="patient-name" name="name" type="text" autocomplete="name" required>
+
+        <label for="patient-email">Email</label>
+        <input id="patient-email" name="email" type="email" autocomplete="email" required>
+
+        <label for="patient-phone">Phone number</label>
+        <input id="patient-phone" name="phone" type="tel" autocomplete="tel" required>
+
+        <label for="contact-method">Preferred contact method</label>
+        <select id="contact-method" name="contact-method" required>
+          <option value="">Choose one</option>
+          <option value="Phone">Phone</option>
+          <option value="Email">Email</option>
+          <option value="Text message">Text message</option>
+        </select>
+
+        <label for="callback-time">Preferred callback time</label>
+        <input id="callback-time" name="callback-time" type="text" placeholder="For example: weekday mornings">
+
+        <label class="consent-row">
+          <input id="contact-consent" type="checkbox" required>
+          <span>I consent to being contacted by VS MindCare about my consultation request.</span>
+        </label>
+
+        <button type="submit" class="btn btn-primary">Prepare email request</button>
+        <p class="form-note">Your email app will open with a prepared message to info@vsmindcare.com. Review it and press Send. Our team will contact you within 24 hours.</p>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+      </form>
     </div>
     <div class="contact-card">
       <h3>Contact Details</h3>
