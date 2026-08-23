@@ -28,38 +28,4 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-  // Consultation request email
-  var consultationForm = document.getElementById('consultation-form');
-  if (consultationForm) {
-    consultationForm.addEventListener('submit', function (event) {
-      event.preventDefault();
-
-      var name = document.getElementById('patient-name').value.trim();
-      var email = document.getElementById('patient-email').value.trim();
-      var phone = document.getElementById('patient-phone').value.trim();
-      var method = document.getElementById('contact-method').value;
-      var callbackTime = document.getElementById('callback-time').value.trim() || 'No preference provided';
-
-      var subject = 'Free consultation request from ' + name;
-      var body = [
-        'New free consultation request',
-        '',
-        'Name: ' + name,
-        'Email: ' + email,
-        'Phone: ' + phone,
-        'Preferred contact method: ' + method,
-        'Preferred callback time: ' + callbackTime,
-        '',
-        'The prospective patient consented to being contacted by VS MindCare.',
-        'No medical information was requested by this form.'
-      ].join('\n');
-
-      document.getElementById('form-status').textContent =
-        'Your email app is opening. Please review the prepared message and press Send. We will contact you within 24 hours.';
-
-      window.location.href = 'mailto:info@vsmindcare.com?subject=' +
-        encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    });
-  }
-
 });
