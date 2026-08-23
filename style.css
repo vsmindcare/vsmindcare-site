@@ -160,3 +160,13 @@ footer p{font-size:0.92rem;color:rgba(246,242,233,0.75);margin-bottom:6px;}
 .contact-card h3{font-family:var(--serif);margin-bottom:18px;}
 .contact-card p{margin-bottom:10px;color:#4a4a42;}
 @media (max-width:800px){.contact-grid{grid-template-columns:1fr;}}
+
+.consultation-form{display:grid;gap:10px;margin-top:22px;}
+.consultation-form label{font-size:0.86rem;font-weight:600;color:var(--indigo);margin-top:4px;}
+.consultation-form input,.consultation-form select{width:100%;font:inherit;color:var(--ink);background:#fff;border:1px solid var(--sand-deep);border-radius:10px;padding:12px 14px;}
+.consultation-form input:focus,.consultation-form select:focus{outline:3px solid rgba(126,150,131,0.25);border-color:var(--sage);}
+.consultation-form .consent-row{display:flex;align-items:flex-start;gap:10px;font-weight:400;line-height:1.4;margin:8px 0;}
+.consultation-form .consent-row input{width:auto;margin-top:4px;}
+.consultation-form .btn{justify-self:start;margin-top:4px;}
+.consultation-form .form-note{font-size:0.8rem;color:#5a5a50;margin-top:8px;}
+.consultation-form .form-status{font-size:0.85rem;font-weight:600;color:var(--sage);min-height:1.3em;}
